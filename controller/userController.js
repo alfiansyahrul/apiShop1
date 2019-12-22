@@ -1,9 +1,5 @@
 const User = require('../models/user')
 
-exports.home = (req,res) => {
-    res.send("Wellcome to User")
-}
-
 exports.listUser = async (req, res) => {
     let data = await User.find()
     res.send(JSON.stringify({ "status" : 200, "error" : null, "response" : data}))
